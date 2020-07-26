@@ -3,7 +3,7 @@ import { fetchQuizQuestions } from "./API";
 // Components
 import QuestionCard from "./components/QuestionCard";
 // Types
-import { QuestionState, Difficulty } from "./API";
+import { QuestionState, Difficulty, Category } from "./API";
 // Styles
 import { GlobalStyle, Wrapper } from "./App.styles";
 
@@ -24,7 +24,9 @@ const App = () => {
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
 
-  //console.log(fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY));
+  console.log(
+    fetchQuizQuestions(TOTAL_QUESTIONS, Category.ENTER_BOOKS, Difficulty.EASY)
+  );
 
   const startTrivia = async () => {
     setLoading(true);
@@ -32,6 +34,7 @@ const App = () => {
 
     const newQuestions = await fetchQuizQuestions(
       TOTAL_QUESTIONS,
+      Category.ENTER_BOOKS,
       Difficulty.EASY
     );
 
