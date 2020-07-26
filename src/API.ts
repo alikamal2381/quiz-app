@@ -17,8 +17,7 @@ export enum Difficulty {
   HARD = "hard",
 }
 
-const sample =
-  "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple";
+// const sample = "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple";
 
 export const fetchQuizQuestions = async (
   amount: number,
